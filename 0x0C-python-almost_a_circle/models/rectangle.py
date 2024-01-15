@@ -136,5 +136,4 @@ class Rectangle(Base):
         """
             Overwritting the str method
         """
-        return ("[Rectangle] ({}) {}/{} - {}"
-                "/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
