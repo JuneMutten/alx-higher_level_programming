@@ -26,8 +26,8 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
-        @staticmethod
+    
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         Returns the json string representation of list_dictionaries
@@ -37,7 +37,7 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
-
+    
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -66,7 +66,7 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
-
+    
     @classmethod
     def create(cls, **dictionary):
         """
@@ -81,7 +81,7 @@ class Base:
                 new = cls(1)
             new.update(**dictionary)
             return new
-
+    
     @classmethod
     def load_from_file(cls):
         """
@@ -141,7 +141,7 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-
+        
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares using the turtle module.
