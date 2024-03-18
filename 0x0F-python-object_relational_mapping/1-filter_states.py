@@ -15,14 +15,14 @@ if __name__ == "__main__":
 
     # Creating query and executing query
     my_cursor = my_db.cursor()
-    my_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    my_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
     # Fetches data from the query
     my_data = my_cursor.fetchall()
 
-    # Iterating
-    for data in my_data:
-        print(data)
+    #Iterating
+    for row in my_data:
+        print(row)
 
     # Closing cursors and databases
     my_cursor.close()
