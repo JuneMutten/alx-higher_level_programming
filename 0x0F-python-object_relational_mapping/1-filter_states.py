@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # Fetches data from the query
     my_data = my_cursor.fetchall()
 
-    #Iterating
+    # Iterating
     for row in my_data:
         print(row)
 
